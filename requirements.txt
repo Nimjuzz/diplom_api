@@ -10,4 +10,3 @@ djangorestframework-jwt
 django-allauth
 djoser
 drf-yasg
-gunicorn
