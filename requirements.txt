@@ -1,0 +1,6 @@
+Django
+djangorestframework
+djangorestframework-jwt
+django-allauth
+djoser
+drf-yasg
