@@ -4,3 +4,10 @@ djangorestframework-jwt
 django-allauth
 djoser
 drf-yasg
+Django
+djangorestframework
+djangorestframework-jwt
+django-allauth
+djoser
+drf-yasg
+gunicorn
