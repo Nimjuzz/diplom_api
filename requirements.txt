@@ -12,3 +12,5 @@ inflection==0.5.1
 openai==1.16.2
 requests==2.31.0
 pytz==2024.1
+pydantic==2.6.4
+pydantic-core==2.16.3
