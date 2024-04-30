@@ -6,7 +6,6 @@ dj-rest-auth==5.1.0
 Django==4.2.4
 django-cors-headers==4.2.0
 djangorestframework==3.14.0
-djangorestframework-jwt==1.11.0
 djangorestframework-simplejwt==5.3.1
 django-allauth==0.61.1
 djoser==2.2.2
@@ -18,7 +17,7 @@ inflection==0.5.1
 packaging==23.1
 pillow==10.2.0
 psycopg2==2.9.6
-PyJWT==1.7.1
+PyJWT==2.8.0
 pytz==2023.3
 PyYAML==6.0.1
 requests==2.31.0
