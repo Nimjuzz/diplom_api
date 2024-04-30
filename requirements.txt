@@ -1,7 +1,7 @@
 asgiref==3.7.2
 certifi==2024.2.2
 charset-normalizer==3.3.2
-decouple==0.0.7
+python-decouple==3.8
 dj-rest-auth==5.1.0
 Django==4.2.4
 django-cors-headers==4.2.0
