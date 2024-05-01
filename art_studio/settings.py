@@ -31,6 +31,15 @@ DEBUG = True
 
 ALLOWED_HOSTS = ['*']
 
+CSRF_TRUSTED_ORIGINS = [
+    "https://*.up.railway.app",
+    "https://sschat-production.up.railway.app",
+]
+CORS_ORIGIN_ALLOW_ALL = True
+CORS_ALLOWED_ORIGINS = [
+    'http://*',
+    'https://*',
+]
 
 # Application definition
 
