@@ -33,7 +33,7 @@ class GetKeywords(generics.GenericAPIView):
     def post(self, request, *args, **kwargs):
         text = request.GET.get('text')
         result = get_keywords(text)
-        return Response({'result': result},status=status.HTTP_200_OK, headers={'Content-Type': 'application/json; charset=utf-8'})
+        return Response({'result': result},status=status.HTTPS_200_OK, headers={'Content-Type': 'application/json; charset=utf-8'})
 
 
 
@@ -44,9 +44,9 @@ class GetKeywordVal(generics.GenericAPIView):
         text = request.GET.get('text')
         result = get_keyword_val(text)
 
-        
 
-        return Response({'result': result},status=status.HTTP_200_OK, headers={'Content-Type': 'application/json; charset=utf-8'})
+
+        return Response({'result': result},status=status.HTTPS_200_OK, headers={'Content-Type': 'application/json; charset=utf-8'})
 
 
 
