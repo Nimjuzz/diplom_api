@@ -1,5 +1,5 @@
 from openai import OpenAI
-
+from django.conf import settings
 
 def preprocess_text(text):
     # Приведение текста к нижнему регистру
@@ -73,7 +73,7 @@ def find_keywords(text, top_n=5):
 
 
 def get_keywords(text):
-    client = OpenAI(api_key='sk-proj-ybPncVMolktXGrX3KypDT3BlbkFJqNnhdfwGtoYKHMwL7bBw')
+    client = OpenAI(settings.api_key)
 
     response = client.chat.completions.create(
       model="gpt-4",
@@ -221,7 +221,7 @@ def get_keywords(text):
 
 
 def get_keyword_val(text):
-    client = OpenAI(api_key='sk-proj-ybPncVMolktXGrX3KypDT3BlbkFJqNnhdfwGtoYKHMwL7bBw')
+    client = OpenAI(settings.api_key)
 
     response = client.chat.completions.create(
       model="gpt-4",
