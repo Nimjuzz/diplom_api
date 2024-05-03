@@ -8,6 +8,7 @@ schema_view = get_schema_view(
       default_version='v1',
       description="API art",
    ),
+   url='https://sschat-production.up.railway.app',
    public=True,
    permission_classes=(AllowAny,),
 )
