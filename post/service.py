@@ -75,7 +75,7 @@ def get_keywords(text):
     client = OpenAI(api_key='sk-proj-7UVtpqSQsypNoTO34aolT3BlbkFJrmYh76kc5D3D6znmyuqz')
 
     response = client.chat.completions.create(
-      model="gpt-4",
+      model="gpt-3.5-turbo",
       messages=[
         {
           "role": "system",
@@ -97,7 +97,7 @@ def get_keywords(text):
             собрании, после чего портал снова откроется для преподавателя.
 
             Что такое пререквизиты?
-            Пререквизиты - это дисциплины, предшествующие изучению данной
+            Пререквизиты - это дисциплины, предшествующие изучению данной дисциплины.
             В какой период можно сделать drop?
             Drop (отказ от тех или иных дисциплин с вашего расписания) дисциплин при регистрации на портале - бесплатна. На 5-10 неделе вы платите
             50% от полной стоимости предмета, на 10-15 неделе 100% сумму.
@@ -219,35 +219,35 @@ def get_keywords(text):
 
 
 
-# def get_keyword_val(text):
-#     client = OpenAI(api_key='sk-proj-7UVtpqSQsypNoTO34aolT3BlbkFJrmYh76kc5D3D6znmyuqz')
+def get_keyword_val(text):
+    client = OpenAI(api_key='sk-proj-7UVtpqSQsypNoTO34aolT3BlbkFJrmYh76kc5D3D6znmyuqz')
 
-#     response = client.chat.completions.create(
-#       model="gpt-4",
-#       messages=[
-#         {
-#           "role": "system",
-#           "content": "Сөздің мағынасын, қысқаша түсіндір, Hyunday авто көлігі негізінде"
-#         },
-#         {
-#           "role": "user",
-#           "content": text
-#         }
-#       ],
-#       temperature=1,
-#       max_tokens=256,
-#       top_p=1,
-#       frequency_penalty=0,
-#       presence_penalty=0
-#     )
-#     result = ''
-#     if response and response.choices:
-#         first_choice = response.choices[0]
+    response = client.chat.completions.create(
+      model="gpt-3.5-turbo",
+      messages=[
+        {
+          "role": "system",
+          "content": "Сөздің мағынасын, қысқаша түсіндір, Hyunday авто көлігі негізінде"
+        },
+        {
+          "role": "user",
+          "content": text
+        }
+      ],
+      temperature=1,
+      max_tokens=256,
+      top_p=1,
+      frequency_penalty=0,
+      presence_penalty=0
+    )
+    result = ''
+    if response and response.choices:
+        first_choice = response.choices[0]
 
-#         if first_choice.message and first_choice.message.content:
-#             result = first_choice.message.content
+        if first_choice.message and first_choice.message.content:
+            result = first_choice.message.content
 
-#     return result
+    return result
 
 
 def extract_sentences(text):
