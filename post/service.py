@@ -219,35 +219,35 @@ def get_keywords(text):
 
 
 
-def get_keyword_val(text):
-    client = OpenAI(api_key='sk-proj-7UVtpqSQsypNoTO34aolT3BlbkFJrmYh76kc5D3D6znmyuqz')
+# def get_keyword_val(text):
+#     client = OpenAI(api_key='sk-proj-7UVtpqSQsypNoTO34aolT3BlbkFJrmYh76kc5D3D6znmyuqz')
 
-    response = client.chat.completions.create(
-      model="gpt-4",
-      messages=[
-        {
-          "role": "system",
-          "content": "Сөздің мағынасын, қысқаша түсіндір, Hyunday авто көлігі негізінде"
-        },
-        {
-          "role": "user",
-          "content": text
-        }
-      ],
-      temperature=1,
-      max_tokens=256,
-      top_p=1,
-      frequency_penalty=0,
-      presence_penalty=0
-    )
-    result = ''
-    if response and response.choices:
-        first_choice = response.choices[0]
+#     response = client.chat.completions.create(
+#       model="gpt-4",
+#       messages=[
+#         {
+#           "role": "system",
+#           "content": "Сөздің мағынасын, қысқаша түсіндір, Hyunday авто көлігі негізінде"
+#         },
+#         {
+#           "role": "user",
+#           "content": text
+#         }
+#       ],
+#       temperature=1,
+#       max_tokens=256,
+#       top_p=1,
+#       frequency_penalty=0,
+#       presence_penalty=0
+#     )
+#     result = ''
+#     if response and response.choices:
+#         first_choice = response.choices[0]
 
-        if first_choice.message and first_choice.message.content:
-            result = first_choice.message.content
+#         if first_choice.message and first_choice.message.content:
+#             result = first_choice.message.content
 
-    return result
+#     return result
 
 
 def extract_sentences(text):
