@@ -75,7 +75,7 @@ def get_keywords(text):
     client = OpenAI(api_key='sk-proj-xQ4MS0UtHg7Yqt0PN1a2T3BlbkFJRAEn3MY1XxQnVjMPaPD0')
 
     response = client.chat.completions.create(
-      model="gpt-4",
+      model="gpt-3.5-turbo",
       messages=[
         {
           "role": "system",
@@ -223,7 +223,7 @@ def get_keyword_val(text):
     client = OpenAI(api_key='sk-proj-xQ4MS0UtHg7Yqt0PN1a2T3BlbkFJRAEn3MY1XxQnVjMPaPD0')
 
     response = client.chat.completions.create(
-      model="gpt-4",
+      model="gpt-3.5-turbo",
       messages=[
         {
           "role": "system",
