@@ -72,7 +72,7 @@ def find_keywords(text, top_n=5):
 
 
 def get_keywords(text):
-    client = OpenAI(api_key='sk-proj-T2Q2Ru23L2XpeZUqertzT3BlbkFJBH258BZxRjOvA0yIe7vD')
+    client = OpenAI(api_key='sk-proj-xQ4MS0UtHg7Yqt0PN1a2T3BlbkFJRAEn3MY1XxQnVjMPaPD0')
 
     response = client.chat.completions.create(
       model="gpt-4",
@@ -220,7 +220,7 @@ def get_keywords(text):
 
 
 def get_keyword_val(text):
-    client = OpenAI(api_key='sk-proj-T2Q2Ru23L2XpeZUqertzT3BlbkFJBH258BZxRjOvA0yIe7vD')
+    client = OpenAI(api_key='sk-proj-xQ4MS0UtHg7Yqt0PN1a2T3BlbkFJRAEn3MY1XxQnVjMPaPD0')
 
     response = client.chat.completions.create(
       model="gpt-4",
