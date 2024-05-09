@@ -81,12 +81,15 @@ INSTALLED_APPS = [
     'allauth.socialaccount.providers.google',
     "drf_yasg",
 
+    'corsheaders',
+
     'accounts',
     'social_auth',
     'post'
 ]
 
 MIDDLEWARE = [
+    'corsheaders.middleware.CorsMiddleware',
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
