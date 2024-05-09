@@ -1,4 +1,9 @@
+import os
+from dotenv import load_dotenv
 from openai import OpenAI
+
+def load_environment_variables():
+    load_dotenv()
 
 def preprocess_text(text):
     # Приведение текста к нижнему регистру
@@ -72,7 +77,10 @@ def find_keywords(text, top_n=5):
 
 
 def get_keywords(text):
-    client = OpenAI(api_key='sk-proj-xQ4MS0UtHg7Yqt0PN1a2T3BlbkFJRAEn3MY1XxQnVjMPaPD0')
+    load_environment_variables()
+    api_key = os.getenv("API_KEY")
+
+    client = OpenAI(api_key=api_key)
 
     response = client.chat.completions.create(
       model="gpt-3.5-turbo",
@@ -220,7 +228,9 @@ def get_keywords(text):
 
 
 def get_keyword_val(text):
-    client = OpenAI(api_key='sk-proj-xQ4MS0UtHg7Yqt0PN1a2T3BlbkFJRAEn3MY1XxQnVjMPaPD0')
+    load_environment_variables()
+    api_key = os.getenv("API_KEY")
+    client = OpenAI(api_key=api_key)
 
     response = client.chat.completions.create(
       model="gpt-3.5-turbo",
